@@ -64,23 +64,10 @@ function App() {
         role="button"
         for="checkbox"
         class="switch"
-        checked={isCelcium}
-        onChange={(e) => setIsCelcium(e.target.checked)}
-      >
-        <input type="checkbox" id="checkbox" />
-        <span class="switch__ball"></span>
-        <i class="ri-sun-line switch__sun"></i>
-        <i class="ri-moon-line switch__moon"></i>
-      </label>
-
-      <label
-        role="button"
-        for="checkbox1"
-        class="switch"
         checked={isDark}
         onChange={(e) => setIsDark(e.target.checked)}
       >
-        <input type="checkbox" id="checkbox1" />
+        <input type="checkbox" id="checkbox" />
         <span class="switch__ball"></span>
         <i class="ri-sun-line switch__sun"></i>
         <i class="ri-moon-line switch__moon"></i>
@@ -94,13 +81,53 @@ function App() {
           <div className="temp">
             {data.main ? (
               isCelcium ? (
-                <h1>{Math.round(data.main.temp - 273.15)}°C</h1>
+                <div style={{ display: "flex" }}>
+                  <label
+                    role="button"
+                    for="checkbox1"
+                    class="switch1"
+                    checked={isCelcium}
+                    onChange={(e) => setIsCelcium(e.target.checked)}
+                  >
+                    <input type="checkbox" id="checkbox1" />
+                    <span class="switch__ball1"></span>
+                    <i class="ri-sun-line switch__sun1"></i>
+                    <i class="ri-moon-line switch__moon1"></i>
+                  </label>
+                  <h1>{Math.round(data.main.temp - 273.15)}°C</h1>
+                </div>
               ) : (
-                <h1>
-                  {Math.round((data.main.temp - 273.15) * (9 / 5) + 32)}°F
-                </h1>
+                <div style={{ display: "flex" }}>
+                  <label
+                    role="button"
+                    for="checkbox1"
+                    class="switch1"
+                    checked={isCelcium}
+                    onChange={(e) => setIsCelcium(e.target.checked)}
+                  >
+                    <input type="checkbox" id="checkbox1" />
+                    <span class="switch__ball1"></span>
+                    <i class="ri-sun-line switch__sun1"></i>
+                    <i class="ri-moon-line switch__moon1"></i>
+                  </label>
+                  <h1>
+                    {Math.round((data.main.temp - 273.15) * (9 / 5) + 32)}°F
+                  </h1>
+                </div>
               )
             ) : null}
+            {/* <label
+              role="button"
+              for="checkbox1"
+              class="switch1"
+              checked={isCelcium}
+              onChange={(e) => setIsCelcium(e.target.checked)}
+            >
+              <input type="checkbox" id="checkbox1" />
+              <span class="switch__ball1"></span>
+              <i class="ri-sun-line switch__sun1"></i>
+              <i class="ri-moon-line switch__moon1"></i>
+            </label> */}
             <div className="icon">
               {data.main ? (
                 <img src={icons[`icon_${data.weather[0].icon}`]} alt="icon" />

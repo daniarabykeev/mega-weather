@@ -113,9 +113,6 @@ h1 {
 #checkbox {
   display: none;
 }
-#checkbox1 {
-  display: none;
-}
 .switch {
   position: relative;
   display: inline-block;
@@ -149,6 +146,52 @@ h1 {
 #checkbox:checked + .switch__ball {
   transform: translate(29px, -50%);
 }
-#checkbox1:checked + .switch__ball {
+
+/* label1 */
+#checkbox1 {
+  display: none;
+}
+.switch1 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 31px;
+  border: 2px solid #0561ee;
+  border-radius: 30px;
+  cursor: pointer;
+  top: 50px;
+}
+.switch1 {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 31px;
+  border: 2px solid #0561ee;
+  border-radius: 30px;
+  cursor: pointer;
+  transform: rotate(270deg);
+}
+.switch1 > * {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.switch__ball1 {
+  left: 1px;
+  z-index: 10;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #0561ee;
+  border-radius: 50%;
+  transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+}
+.switch__sun1 {
+  left: 5px;
+}
+.switch__moon1 {
+  right: 5px;
+}
+#checkbox1:checked + .switch__ball1 {
   transform: translate(29px, -50%);
 }
