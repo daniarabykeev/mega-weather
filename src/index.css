@@ -95,7 +95,7 @@ h1 {
   width: 100%;
   margin: 1rem auto;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -155,21 +155,12 @@ h1 {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 31px;
-  border: 2px solid #0561ee;
-  border-radius: 30px;
-  cursor: pointer;
-  top: 50px;
-}
-.switch1 {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 31px;
+  height: 25px;
   border: 2px solid #0561ee;
   border-radius: 30px;
   cursor: pointer;
   transform: rotate(270deg);
+  top: 50px;
 }
 .switch1 > * {
   position: absolute;
@@ -180,8 +171,8 @@ h1 {
   left: 1px;
   z-index: 10;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 19px;
+  height: 19px;
   background-color: #0561ee;
   border-radius: 50%;
   transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
@@ -193,5 +184,5 @@ h1 {
   right: 5px;
 }
 #checkbox1:checked + .switch__ball1 {
-  transform: translate(29px, -50%);
+  transform: translate(35px, -50%);
 }
