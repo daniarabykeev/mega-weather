@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import * as icons from "./assets/icons";
 import theme from "./theme";
+import logo from "./assets/icons/mega-logo.png";
 
 function App() {
   const [data, setData] = useState({});
@@ -45,6 +46,8 @@ function App() {
   return (
     <div className="app">
       <div className="search">
+        {/* <img id="logo" src={logo} alt="" /> */}
+
         <input
           placeholder="Enter location"
           value={location}
@@ -53,25 +56,34 @@ function App() {
           onChange={(event) => setLocation(event.target.value)}
           onKeyDown={searchLocation}
         />
-        {/* <input
-          type="checkbox"
-          checked={isDark}
-          onChange={(e) => setIsDark(e.target.checked)}
-        /> */}
       </div>
 
-      <label
-        role="button"
-        for="checkbox"
-        class="switch"
-        checked={isDark}
-        onChange={(e) => setIsDark(e.target.checked)}
-      >
-        <input type="checkbox" id="checkbox" />
-        <span class="switch__ball"></span>
-        <i class="ri-sun-line switch__sun"></i>
-        <i class="ri-moon-line switch__moon"></i>
-      </label>
+      <div className="switchers">
+        <label
+          role="button"
+          for="checkbox"
+          class="switch"
+          checked={isDark}
+          onChange={(e) => setIsDark(e.target.checked)}
+        >
+          <input type="checkbox" id="checkbox" />
+          <span class="switch__ball"></span>
+          <i class="ri-sun-line switch__sun"></i>
+          <i class="ri-moon-line switch__moon"></i>
+        </label>
+        <label
+          role="button"
+          for="checkbox1"
+          class="switch1"
+          checked={isCelcium}
+          onChange={(e) => setIsCelcium(e.target.checked)}
+        >
+          <input type="checkbox" id="checkbox1" />
+          <span class="switch__ball1"></span>
+          <i class="ri-sun-line switch__sun1"></i>
+          <i class="ri-moon-line switch__moon1"></i>
+        </label>
+      </div>
 
       <div className="container">
         <div className="top">
@@ -81,61 +93,27 @@ function App() {
           <div className="temp">
             {data.main ? (
               isCelcium ? (
-                <div style={{ display: "flex" }}>
-                  <label
-                    role="button"
-                    for="checkbox1"
-                    class="switch1"
-                    checked={isCelcium}
-                    onChange={(e) => setIsCelcium(e.target.checked)}
-                  >
-                    <input type="checkbox" id="checkbox1" />
-                    <span class="switch__ball1"></span>
-                    <i class="ri-sun-line switch__sun1"></i>
-                    <i class="ri-moon-line switch__moon1"></i>
-                  </label>
-                  <h1>{Math.round(data.main.temp - 273.15)}°C</h1>
-                </div>
+                <h1 className="cur-temp">
+                  {Math.round(data.main.temp - 273.15)}°C
+                </h1>
               ) : (
-                <div style={{ display: "flex" }}>
-                  <label
-                    role="button"
-                    for="checkbox1"
-                    class="switch1"
-                    checked={isCelcium}
-                    onChange={(e) => setIsCelcium(e.target.checked)}
-                  >
-                    <input type="checkbox" id="checkbox1" />
-                    <span class="switch__ball1"></span>
-                    <i class="ri-sun-line switch__sun1"></i>
-                    <i class="ri-moon-line switch__moon1"></i>
-                  </label>
-                  <h1>
-                    {Math.round((data.main.temp - 273.15) * (9 / 5) + 32)}°F
-                  </h1>
-                </div>
+                <h1 className="cur-temp">
+                  {Math.round((data.main.temp - 273.15) * (9 / 5) + 32)}°F
+                </h1>
               )
             ) : null}
-            {/* <label
-              role="button"
-              for="checkbox1"
-              class="switch1"
-              checked={isCelcium}
-              onChange={(e) => setIsCelcium(e.target.checked)}
-            >
-              <input type="checkbox" id="checkbox1" />
-              <span class="switch__ball1"></span>
-              <i class="ri-sun-line switch__sun1"></i>
-              <i class="ri-moon-line switch__moon1"></i>
-            </label> */}
             <div className="icon">
               {data.main ? (
-                <img src={icons[`icon_${data.weather[0].icon}`]} alt="icon" />
+                <img
+                  id="icon"
+                  src={icons[`icon_${data.weather[0].icon}`]}
+                  alt="icon"
+                />
               ) : null}
+              <div className="description">
+                {data.weather ? <p id="desc">{data.weather[0].main}</p> : null}
+              </div>
             </div>
-          </div>
-          <div className="description">
-            {data.weather ? <p>{data.weather[0].main}</p> : null}
           </div>
         </div>
 
@@ -154,7 +132,7 @@ function App() {
                   </p>
                 )
               ) : null}
-              <p>Feels like</p>
+              <p className="bottom-desc">Feels like</p>
             </div>
             <div className="bottom-temp">
               {data.main ? (

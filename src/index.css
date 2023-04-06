@@ -26,6 +26,13 @@ h1 {
   font-size: 6rem;
 }
 
+#logo {
+  width: 40px;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 0.2em;
+}
+
 .app {
   width: 100%;
   height: 100vh;
@@ -53,15 +60,18 @@ h1 {
 
 .app input {
   padding: 0.7rem 1.5rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   border-radius: 25px;
   border: 1px solid var(--input-color);
   background: var(--input-bgc);
   /* color: rgb(102, 183, 60); */
+  color: var(--input-color);
 }
 
 ::placeholder {
   color: var(--input-color);
+  position: relative;
+  left: 30px;
 }
 
 .container {
@@ -83,11 +93,21 @@ h1 {
 
 .app .description {
   position: relative;
-  right: -90%;
   transform-origin: 0 0;
-  transform: rotate(270deg);
+  /* transform: rotate(270deg); */
+  color: var(--font-color);
+  top: 1rem;
 }
-
+.app .description p {
+  font-size: 3rem;
+}
+.icon {
+  display: flex;
+}
+#icon {
+  width: 20rem;
+  margin-left: 5rem;
+}
 .app .bottom {
   display: flex;
   justify-content: space-evenly;
@@ -109,6 +129,12 @@ h1 {
   z-index: 1111;
 }
 
+.temp-switch {
+  display: flex;
+  position: relative;
+  left: 10px;
+}
+
 /* styles for C/F switcher */
 #checkbox {
   display: none;
@@ -118,7 +144,7 @@ h1 {
   display: inline-block;
   width: 60px;
   height: 31px;
-  border: 2px solid #0561ee;
+  border: 2px solid var(--font-color);
   border-radius: 30px;
   cursor: pointer;
 }
@@ -133,7 +159,7 @@ h1 {
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-color: #0561ee;
+  background-color: var(--font-color);
   border-radius: 50%;
   transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
 }
@@ -148,6 +174,12 @@ h1 {
 }
 
 /* label1 */
+.switchers {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-right: 3rem;
+}
 #checkbox1 {
   display: none;
 }
@@ -155,12 +187,13 @@ h1 {
   position: relative;
   display: inline-block;
   width: 60px;
-  height: 25px;
-  border: 2px solid #0561ee;
+  height: 31px;
+  border: 2px solid var(--font-color);
   border-radius: 30px;
   cursor: pointer;
-  transform: rotate(270deg);
+  /* transform: rotate(270deg); */
   top: 50px;
+  /* left: -20px; */
 }
 .switch1 > * {
   position: absolute;
@@ -171,9 +204,9 @@ h1 {
   left: 1px;
   z-index: 10;
   display: inline-block;
-  width: 19px;
-  height: 19px;
-  background-color: #0561ee;
+  width: 25px;
+  height: 25px;
+  background-color: var(--font-color);
   border-radius: 50%;
   transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
 }
@@ -184,5 +217,599 @@ h1 {
   right: 5px;
 }
 #checkbox1:checked + .switch__ball1 {
-  transform: translate(35px, -50%);
+  transform: translate(29px, -50%);
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 30rem;
+    height: 4rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 3rem;
+  }
+  .cur-temp {
+    font-size: 10rem;
+    margin-left: 8rem;
+  }
+  #icon {
+    width: 14rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+  }
+  #desc {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 5rem;
+  }
+  .switch1 {
+    width: 5rem;
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(48px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(48px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 8rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 8rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .bottom-temp p {
+    font-size: 2.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+/* Landscape tablets and medium desktops */
+@media all and (max-width: 1200px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 30rem;
+    height: 4rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 3rem;
+  }
+  .cur-temp {
+    font-size: 10rem;
+    margin-left: 8rem;
+  }
+  #icon {
+    width: 14rem;
+    margin-left: 10rem;
+    margin-top: 2rem;
+  }
+  #desc {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 5rem;
+  }
+  .switch1 {
+    width: 5rem;
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(48px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(48px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 8rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 8rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .bottom-temp p {
+    font-size: 2.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+/* Portrait tablets and small desktops */
+@media all and (max-width: 992px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 30rem;
+    height: 4rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 4rem;
+  }
+  .cur-temp {
+    font-size: 8rem;
+    margin-left: 4rem;
+  }
+  #icon {
+    width: 10rem;
+    margin-left: 5rem;
+  }
+  #desc {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 5rem;
+  }
+  .switch1 {
+    width: 5rem;
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(48px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(48px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 8rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .bottom-temp p {
+    font-size: 2.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 30rem;
+    height: 4rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 4rem;
+  }
+  .cur-temp {
+    font-size: 14rem;
+    margin-left: 4rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 5rem;
+  }
+  .switch1 {
+    width: 5rem;
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(48px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(48px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 14rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .bottom-temp p {
+    font-size: 3rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+    height: 80%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 20rem;
+    height: 3rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    bottom: 0.2rem;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 3rem;
+  }
+  .cur-temp {
+    font-size: 4rem;
+    margin-left: 4rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 4rem;
+    height: 1.6rem;
+  }
+  .switch1 {
+    width: 4rem;
+    height: 1.6rem;
+  }
+  .switch__ball {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  .switch__ball1 {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(38px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(38px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 6rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 18rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-temp p {
+    font-size: 2rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+/* Iphone 5 */
+@media (max-width: 320px) {
+  .container {
+    max-width: 90%;
+    height: 80%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 15rem;
+    height: 3rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    bottom: 0.2rem;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 2rem;
+  }
+  .cur-temp {
+    font-size: 4.5rem;
+    margin-left: 4rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+    margin-right: 10px;
+  }
+  .switch {
+    width: 4rem;
+    height: 1.6rem;
+  }
+  .switch1 {
+    width: 4rem;
+    height: 1.6rem;
+    padding: 0;
+    top: 1rem;
+  }
+  .switch__ball {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  .switch__ball1 {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  #icon {
+    width: 5rem;
+    margin-left: 2rem;
+  }
+  #desc {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  #checkbox:checked + .switch__ball {
+    transform: translate(38px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(38px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 7rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-temp p {
+    font-size: 1.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
 }
