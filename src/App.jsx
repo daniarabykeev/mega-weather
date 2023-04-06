@@ -61,27 +61,27 @@ function App() {
       <div className="switchers">
         <label
           role="button"
-          for="checkbox"
-          class="switch"
+          htmlFor="checkbox"
+          className="switch"
           checked={isDark}
           onChange={(e) => setIsDark(e.target.checked)}
         >
           <input type="checkbox" id="checkbox" />
-          <span class="switch__ball"></span>
-          <i class="ri-sun-line switch__sun"></i>
-          <i class="ri-moon-line switch__moon"></i>
+          <span className="switch__ball"></span>
+          <i className="ri-sun-line switch__sun"></i>
+          <i className="ri-moon-line switch__moon"></i>
         </label>
         <label
           role="button"
-          for="checkbox1"
-          class="switch1"
+          htmlFor="checkbox1"
+          className="switch1"
           checked={isCelcium}
           onChange={(e) => setIsCelcium(e.target.checked)}
         >
           <input type="checkbox" id="checkbox1" />
-          <span class="switch__ball1"></span>
-          <i class="ri-sun-line switch__sun1"></i>
-          <i class="ri-moon-line switch__moon1"></i>
+          <span className="switch__ball1"></span>
+          <i className="ri-sun-line switch__sun1"></i>
+          <i className="ri-moon-line switch__moon1"></i>
         </label>
       </div>
 

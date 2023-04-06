@@ -450,15 +450,15 @@ h1 {
     font-size: 4rem;
   }
   .cur-temp {
-    font-size: 8rem;
+    font-size: 14rem;
     margin-left: 4rem;
   }
   #icon {
-    width: 10rem;
+    width: 14rem;
     margin-left: 5rem;
   }
   #desc {
-    font-size: 3rem;
+    font-size: 5rem;
     margin-left: 1rem;
   }
   .switchers {
@@ -484,7 +484,7 @@ h1 {
     height: 10rem;
     margin: 1rem auto;
     padding: 1rem;
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.2);
   }
@@ -570,7 +570,100 @@ h1 {
     height: 10rem;
     margin: 1rem auto;
     padding: 1rem;
-    margin-bottom: 14rem;
+    margin-bottom: 10rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bold {
+    font-size: 3rem;
+  }
+  .bottom-temp p {
+    font-size: 3rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 30rem;
+    height: 4rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 4rem;
+  }
+  .cur-temp {
+    font-size: 10rem;
+    margin-left: 4rem;
+  }
+  #icon {
+    width: 14rem;
+    margin-left: 5rem;
+  }
+  #desc {
+    font-size: 4rem;
+    margin-left: 1rem;
+  }
+  .switchers {
+    margin-top: 2rem;
+  }
+  .switch {
+    width: 5rem;
+  }
+  .switch1 {
+    width: 5rem;
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(48px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(48px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 10rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 10rem;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.2);
   }
@@ -591,7 +684,7 @@ h1 {
 }
 
 /* Portrait phones and smaller */
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .container {
     max-width: 90%;
     height: 80%;
@@ -631,11 +724,19 @@ h1 {
     font-size: 3rem;
   }
   .cur-temp {
-    font-size: 4rem;
+    font-size: 8rem;
     margin-left: 4rem;
   }
+  #icon {
+    width: 14rem;
+    margin-left: 5rem;
+  }
+  #desc {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
   .switchers {
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .switch {
     width: 4rem;
@@ -676,15 +777,131 @@ h1 {
     justify-content: space-evenly;
     text-align: center;
     width: 100%;
-    height: 6rem;
+    height: 8rem;
     margin: 1rem auto;
     padding: 1rem;
-    margin-bottom: 18rem;
+    margin-bottom: 6rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-temp p {
+    font-size: 2.4rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    max-width: 90%;
+    height: 80%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 20rem;
+    height: 3rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    bottom: 0.2rem;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 3rem;
+  }
+  .cur-temp {
+    font-size: 8rem;
+    margin-left: 4rem;
+  }
+  #icon {
+    width: 14rem;
+    margin-left: 5rem;
+  }
+  #desc {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+  .switchers {
+    margin-top: 4rem;
+  }
+  .switch {
+    width: 4rem;
+    height: 1.6rem;
+  }
+  .switch1 {
+    width: 4rem;
+    height: 1.6rem;
+  }
+  .switch__ball {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  .switch__ball1 {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(38px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(38px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 6.5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 7rem;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.2);
   }
   .bottom-temp p {
     font-size: 2rem;
+  }
+  .bottom-temp {
+    margin-bottom: 2rem;
   }
   .app input {
     padding: 0.7rem 1.5rem;
@@ -798,6 +1015,237 @@ h1 {
     margin: 1rem auto;
     padding: 1rem;
     margin-bottom: 7rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-temp p {
+    font-size: 1.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+@media (max-width: 393px) {
+  .container {
+    max-width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 20rem;
+    height: 3rem;
+  }
+
+  #icon {
+    width: 8rem;
+    margin-left: 2rem;
+  }
+  #desc {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    bottom: 0.2rem;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 3rem;
+  }
+  .cur-temp {
+    font-size: 6rem;
+    margin-left: 4rem;
+  }
+  .switchers {
+    margin-top: 1.5rem;
+  }
+  .switch {
+    width: 3rem;
+    height: 1.3rem;
+  }
+  .switch1 {
+    width: 3rem;
+    height: 1.3rem;
+  }
+  .switch__ball {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  .switch__ball1 {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(27px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(27px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 8.5rem;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bottom-temp p {
+    font-size: 1.5rem;
+  }
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 2.5rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    color: var(--input-color);
+  }
+}
+
+@media (max-width: 375px) {
+  .app {
+    width: 100%;
+  }
+  .container {
+    max-width: 88%;
+    height: 85%;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .app .search {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .app input {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid var(--input-color);
+    background: var(--input-bgc);
+    /* color: rgb(102, 183, 60); */
+    color: var(--input-color);
+    width: 20rem;
+    height: 3rem;
+  }
+
+  #icon {
+    width: 8rem;
+    margin-left: 2rem;
+  }
+  #desc {
+    font-size: 1.6rem;
+    /* margin-left: 1rem; */
+  }
+
+  ::placeholder {
+    color: var(--input-color);
+    position: relative;
+    left: 30px;
+    bottom: 0.2rem;
+    font-size: 2rem;
+  }
+  .location p {
+    font-size: 2rem;
+  }
+  .cur-temp {
+    font-size: 6rem;
+    margin-left: 3rem;
+  }
+  .switchers {
+    margin-top: 1.5rem;
+  }
+  .switch {
+    width: 3rem;
+    height: 1.3rem;
+  }
+  .switch1 {
+    width: 3rem;
+    height: 1.3rem;
+  }
+  .switch__ball {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  .switch__ball1 {
+    left: 1px;
+    z-index: 10;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.52, -0.4, 0.27, 1.55);
+  }
+  #checkbox:checked + .switch__ball {
+    transform: translate(27px, -50%);
+  }
+  #checkbox1:checked + .switch__ball1 {
+    transform: translate(27px, -50%);
+  }
+  .app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    margin-bottom: 8.5rem;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.2);
   }
